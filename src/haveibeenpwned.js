@@ -1,7 +1,7 @@
 /*
  * @CLASS Helper class for HaveIBeenPwned
  */
-class HaveIBeenPwned {
+export default class HaveIBeenPwned {
 
   /*
    * @constructor

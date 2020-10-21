@@ -23,7 +23,7 @@
 
 
 
-class ZxcvbnAdjacencyGraphs {
+export default class ZxcvbnAdjacencyGraphs {
   get qwerty() {
     return {
       "!": ["`~", null, null, "2@", "qQ", null],

@@ -21,7 +21,7 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-class ZxcvbnTimeEstimates {
+export default class ZxcvbnTimeEstimates {
 
   constructor(aLocale) {
     this.locale = aLocale;

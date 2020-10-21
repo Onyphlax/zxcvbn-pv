@@ -1,4 +1,4 @@
-class ZxcvbnL10N {
+export default class ZxcvbnL10N {
   constructor(aLocale) {
     switch (aLocale) {
       case "fr": this.locale = {

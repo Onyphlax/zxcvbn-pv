@@ -1,0 +1,32 @@
+const path = require('path');
+
+module.exports = {
+    entry: './src/zxcvbn.js',
+    output: {
+        filename: 'zxcvbn.min.js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    mode: 'production',
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            ['@babel/preset-env',
+                                {
+                                    targets: {
+                                        esmodules: true,
+                                    },
+                                },
+                            ]
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+};

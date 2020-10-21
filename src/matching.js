@@ -24,7 +24,7 @@
 /*
  * @CLASS Scoring class for zxcvbn-pv
  */
-class ZxcvbnMatching {
+export default class ZxcvbnMatching {
 
   /*
    * @constructor

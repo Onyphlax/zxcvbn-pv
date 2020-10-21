@@ -1,4 +1,6 @@
 # zxcvbn-pv
+Fork of [Privowny zxcvbn-pv](https://github.com/Privowny/zxcvbn-pv) to handle use as a npm package + build and minify all js files
+  
   A 2019 version of [Dropbox's zxcvbn](https://github.com/dropbox/zxcvbn), directly written in a more modern JavaScript, not transpiled from CoffeeScript. Work done by [Privowny](https://privowny.io/).
 
 Bonuses:

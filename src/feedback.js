@@ -22,7 +22,7 @@
  */
 
 
-class ZxcvbnFeedback {
+export default class ZxcvbnFeedback {
 
   get kNO_SUGGESTION_SCORE_THRESHOLD() { return 2; }
 

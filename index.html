@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>test zxcvbn-pv</title>
+    <script src="dist/zxcvbn.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+	    #password, #score {
+		    font-size: 16px;
+		    width: 240px;
+	    }
+	    #score {
+	      margin: 0px;
+	      text-align: center;
+	    }
+	    #bars {
+        margin: 0px;
+	    }
+	    #bars > span {
+	      width: 70px;
+	      height: 4px;
+	      display: none;
+	    }
+	    #bars > span:not(:last-child) {
+	      margin-right: 15px;
+	    }
+	    #bars.DANGEROUS > span {
+	      display: inline-block;
+	      background-color: black;
+	    }
+	    #bars.WEAK #bar1 {
+        display: inline-block;
+        background-color: red;
+      }
+      #bars.GOOD #bar1, #bars.GOOD #bar2 {
+        display: inline-block;
+        background-color: orange;
+      }
+     #bars.STRONG #bar1, #bars.STRONG #bar2,  #bars.STRONG #bar3 {
+        display: inline-block;
+        background-color: green;
+      }
+
+      #rv {
+        margin-bottom: 0px;
+        white-space: pre;
+      }
+    </style>
+  </head>
+  <body onload="Startup()">
+    <p>
+      <label for="locale">Select locale for reports:</label>
+      <select id="locale" oninput="ChangeLocale(this.value)">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+    </p>
+    <p>
+      <label for="password">Enter a password to test:</label><br><input type="text" id="password">
+    </p>
+    <p id="bars"><span id="bar1"> </span><span id="bar2"> </span><span id="bar3"> </span></p>
+    <p id="score"></p>
+    <p id="rv"></p>
+    <pre id="json"></pre>
+  </body>
+</html>

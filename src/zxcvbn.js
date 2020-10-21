@@ -1,3 +1,12 @@
+import ZxcvnFrequencyLists from "./frequency_lists";
+import ZxcvbnAdjacencyGraphs from "./adjacency_graphs";
+import ZxcvbnL10N from "./locales";
+import ZxcvbnTimeEstimates from "./time_estimates";
+import ZxcvbnScoring from "./scoring";
+import ZxcvbnMatching from "./matching";
+import ZxcvbnFeedback from "./feedback";
+import HaveIBeenPwned from "./haveibeenpwned";
+
 /*
  * @CLASS Main class for zxcvbn-pv
  */
@@ -35,7 +44,7 @@ class Zxcvbn {
   /*
    * Checks a password against HaveIBeenPwned and if the password is not
    * leaked, calls zxcvbn. Async.
-   * 
+   *
    * See https://github.com/dropbox/zxcvbn/blob/master/README.md for more
    * information
    *
@@ -85,3 +94,5 @@ class Zxcvbn {
     return rv;
   }
 }
+
+window.Zxcvbn = Zxcvbn;
